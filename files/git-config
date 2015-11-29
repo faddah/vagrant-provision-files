@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+#	user = faddah
+#	email = my_biz@me.com
+[user]
+	name = Faddah Wolf
+	email = my_biz@me.com
