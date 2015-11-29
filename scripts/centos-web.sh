@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Get what yum will need for Node.js install.
-curl --silent --location https://rpm.nodesource.com/setup | bash -
-# Update CentOS with any patches
-yum update -y --exclude-kernel
-# Tools
-yum install -y nano vim git unzip screen nodejs
 # Apache
 yum install -y httpd httpd-devel httpd-tools
 chkconfig --add httpd
@@ -19,16 +13,6 @@ service httpd start
 
 # PHP
 yum install -y php php-cli php-common php-devel php-mysql
-
-# MySQL
-yum install -y mysql mysql-server mysql-devel
-chkconfig --add mysqld
-chkconfig mysqld on
-service mysqld stop
-
-service mysqld start
-
-mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
 cd /vagrant
