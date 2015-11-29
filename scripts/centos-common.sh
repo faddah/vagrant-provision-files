@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Get what yum will need for Node.js install.
-curl --silent --location https://rpm.nodesource.com/setup | bash -
 # Update CentOS with any patches
 yum update -y --exclude-kernel
 # Tools

@@ -22,11 +22,3 @@ sudo -u vagrant wget -q https://raw.githubusercontent.com/faddah/vagrant-provisi
 service httpd restart
 
 cd /
-
-# Add remaining Node.js & NPM updates and packages.
-yum groupinstall -y 'Development Tools'
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n 4.2.2
-sudo npm install -g npm@3.3.12
-sudo npm i -g lodash@3.0.0 bower browserify connect express grunt grunt-cli gulp gulp-cli horse jasmine mocha require socket.io typescript webpack
