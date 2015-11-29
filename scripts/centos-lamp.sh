@@ -31,9 +31,13 @@ service mysqld start
 mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
+cd /vagrant
+sudo -u vagrant wget -q https://raw.githubusercontent.com/faddah/vagrant-provision-files/master/files/index.html
+sudo -u vagrant wget -q https://raw.githubusercontent.com/faddah/vagrant-provision-files/master/files/info.php
 
 service httpd restart
 
+# Add remaining Node.js & NPM updates and packages.
 yum groupinstall -y 'Development Tools'
 sudo npm cache clean -f
 sudo npm install -g n
