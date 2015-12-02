@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # MySQL
-sudo apt-get install mysql-common mysql-server mysql-client mysql-workbench
-chkconfig --add mysqld
-chkconfig mysqld on
-service mysqld stop
+sudo apt-get install --yes mysql-common mysql-server mysql-client mysql-workbench
+# chkconfig --add mysqld
+# chkconfig mysqld on
+# service mysqld stop
 
-service mysqld start
+# service mysqld start
 
-mysql -u root -e "SHOW DATABASES";
+mysql -u root -p -e "SHOW DATABASES";
+read -r -p "Enter password: " response
+response=${response,,}    # tolower
+if [[ $response =~ ^(^M)$ ]]
