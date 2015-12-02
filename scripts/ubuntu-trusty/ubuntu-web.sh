@@ -4,12 +4,12 @@
 sudo apt-get install --yes apache2-bin apache2-dev
 # chkconfig --add httpd
 # chkconfig httpd on
-# service httpd stop
+service apache2 stop
 
 rm -rf /var/www/html
 ln -s /vagrant /var/www/html
 
-# service httpd start
+service apache2 start
 
 # PHP
 sudo apt-get install --yes php5 php5-cli php5-common php5-cgi php5-dev php5-mysql phpmyadmin
@@ -19,6 +19,6 @@ cd /vagrant
 sudo -u vagrant wget -q https://raw.githubusercontent.com/faddah/vagrant-provision-files/master/files/index.html
 sudo -u vagrant wget -q https://raw.githubusercontent.com/faddah/vagrant-provision-files/master/files/info.php
 
-# service httpd restart
+service apache2 restart
 
 cd /
