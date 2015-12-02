@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Apache
-sudo apt-get install -y httpd httpd-devel httpd-tools
+sudo apt-get install apache2-bin apache2-dev
 chkconfig --add httpd
 chkconfig httpd on
 service httpd stop
@@ -12,7 +12,7 @@ ln -s /vagrant /var/www/html
 service httpd start
 
 # PHP
-sudo apt-get install php php-cli php-common php-devel php-mysql
+sudo apt-get install php5 php5-cli php5-common php5-cgi php5-dev php5-mysql phpmyadmin
 
 # Download Starter Content
 cd /vagrant
