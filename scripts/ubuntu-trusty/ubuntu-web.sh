@@ -4,8 +4,10 @@
 sudo apt-get install --yes apache2-bin apache2-dev
 # chkconfig --add httpd
 # chkconfig httpd on
+sudo update-rc.d apache2 defaults
 service apache2 stop
 
+cp /var/www/html/index.html /vagrant/index-apache.html
 rm -rf /var/www/html
 ln -s /vagrant /var/www/html
 
