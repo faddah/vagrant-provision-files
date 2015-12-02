@@ -14,7 +14,7 @@ ln -s /vagrant /var/www/html
 service apache2 start
 
 # PHP
-sudo apt-get install --yes php5 php5-cli php5-common php5-cgi php5-dev php5-mysql phpmyadmin
+sudo apt-get install --yes php5 php5-cli php5-common php5-cgi php5-dev php5-mysql
 
 # Download Starter Content
 cd /vagrant
