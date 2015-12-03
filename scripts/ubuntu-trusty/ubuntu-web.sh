@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Apache
-sudo apt-get install --y apache2 apache2-bin apache2-dev
+sudo apt-get install --yes apache2 apache2-bin apache2-dev
 # sudo update-rc.d apache2 defaults
 # service apache2 stop
 
