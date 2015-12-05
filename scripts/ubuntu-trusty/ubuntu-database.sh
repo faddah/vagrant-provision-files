@@ -56,13 +56,13 @@ echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-sel
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
 # apt-get -y install mysql-server-5.5 phpmyadmin > /dev/null 2>&1
 # Changing the above install line to my own version
-sudo apt-get -y install mysql-server mysql-common mysql-client phpmyadmin
+sudo apt-get -y install mysql-server-5.6 mysql-common-5.6 mysql-client-5.6 phpmyadmin
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASSWD'"
 
-mysql -u root -p -e "SHOW DATABASES";
-read -r -p "Enter password: " response
-response=${response,,}    # tolower
-if [[ $response =~ ^(mysqld)$ ]]
+# mysql -u root -p -e "SHOW DATABASES";
+# read -r -p "Enter password: " response
+# response=${response,,}    # tolower
+# if [[ $response =~ ^(mysqld)$ ]]
