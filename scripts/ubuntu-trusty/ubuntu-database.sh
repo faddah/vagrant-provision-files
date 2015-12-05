@@ -28,7 +28,7 @@ DBNAME=dbtest
 DBUSER=root
 DBPASSWD=mysqld
 
-echo -e "\n--- Mkay, installing now... ---\n"
+echo -e "\n--- Installing MySQL Database Server 5.5 now... ---\n"
 
 echo -e "\n--- Updating packages list ---\n"
 apt-get -qq update
