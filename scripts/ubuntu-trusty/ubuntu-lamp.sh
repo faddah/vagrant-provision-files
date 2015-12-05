@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # Get what yum will need for Node.js install.
 curl --silent --location https://rpm.nodesource.com/setup | bash -

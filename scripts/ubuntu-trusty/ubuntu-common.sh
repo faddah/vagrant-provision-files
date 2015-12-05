@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # For use with the Atlas Vagrant box, ubuntu/trusty64
 # Update Ubuntu apt-get with any patches
