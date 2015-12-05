@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 # Apache
 sudo apt-get install --yes apache2 apache2-bin apache2-dev
