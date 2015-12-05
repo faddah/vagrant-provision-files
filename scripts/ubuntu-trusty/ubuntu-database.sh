@@ -37,8 +37,9 @@ apt-get -qq update
 # echo -e "\n--- Install base packages ---\n"
 # apt-get -y install vim curl build-essential python-software-properties git > /dev/null 2>&1
 
-echo -e "\n--- Add some repos to update our distro ---\n"
-add-apt-repository ppa:ondrej/php5 > /dev/null 2>&1
+# Commented out as these are all ready installed/handled by Ubuntu or my ubuntu-web.sh and ubuntu-nodejs.sh
+# echo -e "\n--- Add some repos to update our distro ---\n"
+# add-apt-repository ppa:ondrej/php5 > /dev/null 2>&1
 # Don't need this, not installing node.js in this script
 # add-apt-repository ppa:chris-lea/node.js > /dev/null 2>&1
 
