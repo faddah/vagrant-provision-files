@@ -65,4 +65,4 @@ mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'loc
 mysql -u root -p -e "SHOW DATABASES";
 read -r -p "Enter password: " response
 response=${response,,}    # tolower
-if [[ $response =~ ^(mysqld^M)$ ]]
+if [[ $response =~ ^(mysqld)$ ]]
