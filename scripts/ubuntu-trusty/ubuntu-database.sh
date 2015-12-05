@@ -2,9 +2,12 @@
 
 # MySQL
 
+# Get debconf-utils for this MySQL set-up.
+sudo apt-get install debconf-utils -y > /dev/null
+
 # Set-up so when MySQL install asks for password, it gets it.
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password mysqld'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password mysqld'
+sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password mysqld"
+sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password mysqld"
 
 # Auto-update again so it gets those changes.
 sudo apt-get update
