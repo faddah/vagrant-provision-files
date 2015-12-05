@@ -48,15 +48,14 @@ apt-get -qq update
 echo -e "\n--- Install MySQL specific packages and settings ---\n"
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | debconf-set-selections
-# Taking these out as phpmyadmin is not installed yet.
-# echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections
-# echo "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD" | debconf-set-selections
-# echo "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD" | debconf-set-selections
-# echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-selections
-# echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/dbconfig-install boolean true" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-selections
+echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
 # apt-get -y install mysql-server-5.5 phpmyadmin > /dev/null 2>&1
 # Changing the above install line to my own version
-sudo apt-get -y install mysql-server-5.6 mysql-common-5.6 mysql-client-5.6
+sudo apt-get -y install mysql-server mysql-common mysql-client phpmyadmin
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
