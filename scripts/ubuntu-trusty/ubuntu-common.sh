@@ -4,4 +4,4 @@
 # Update Ubuntu apt-get with any patches
 sudo apt-get update
 # Tools
-sudo apt-get install --yes git git-man unzip build-essential
+sudo apt-get install --yes build-essential git git-man unzip python-software-properties
