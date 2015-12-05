@@ -56,7 +56,7 @@ echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-sel
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
 # apt-get -y install mysql-server-5.5 phpmyadmin > /dev/null 2>&1
 # Changing the above install line to my own version
-sudo apt-get -y install mysql-server-5.6 mysql-common-5.6 mysql-client-5.6 phpmyadmin
+sudo apt-get -y install mysql-server mysql-common mysql-client phpmyadmin
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
