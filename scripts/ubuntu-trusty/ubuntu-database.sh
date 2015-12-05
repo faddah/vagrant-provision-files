@@ -61,7 +61,7 @@ echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASSWD'"
 
-mysql -u root -e "SHOW DATABASES";
-# read -r -p "Enter password: " response
-# response=${response,,}    # tolower
-# if [[ $response =~ ^(^M)$ ]]
+mysql -u root -p -e "SHOW DATABASES";
+read -r -p "Enter password: " response
+response=${response,,}    # tolower
+if [[ $response =~ ^(mysqld^M)$ ]]
