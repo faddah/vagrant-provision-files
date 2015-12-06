@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # For use with the Atlas Vagrant box, ubuntu/trusty64
-# Update Ubuntu apt-get with any patches
+# Get latest git from core maintainers repository
+echo -e "\n\n--- Getting latest git repository... ---\n\n"
+sudo add-apt-repository ppa:git-core/ppa
+# Update Ubuntu apt-get for the repository to take effect
 echo -e "\n\n--- Updating packages list ---\n\n"
 sudo apt-get update
 # Tools

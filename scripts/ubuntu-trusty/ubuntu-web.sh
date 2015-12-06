@@ -2,7 +2,7 @@
 
 # Apache
 echo -e "\n\n--- Doing the Apache2 install... ---\n\n"
-sudo apt-get install --yes apache2 apache2-bin apache2-dev
+sudo apt-get install --yes apache2 apache2-bin apache2-dev libapache2-mod-php5
 
 echo -e "\n\n--- Stop apache2 service... ---\n\n"
 sudo service apache2 stop
