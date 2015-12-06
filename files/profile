@@ -23,3 +23,8 @@ fi
 
 # node.js and npm fixing
 export PATH=~/npm-global/bin:$PATH
+
+# for listing npm packages
+function npmls() {
+  npm ls --depth=0 "$@" 2>/dev/null
+}
