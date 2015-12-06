@@ -29,7 +29,8 @@ sudo rm -rf /home/vagrant/.profile
 sudo mv /home/vagrant/profile-nodejs /home/vagrant/.profile
 source /home/vagrant/.profile
 
-sudo npm list -g --depth=0
-
 echo -e "\n\n--- Node.js & NPM install... all done! ---\n\n"
+
+npm list -g --depth=0
+
 # ...done!
